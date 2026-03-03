@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnostic Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="report-container">
+
+    <h1>Diagnostic Report</h1>
+
+    <div class="result-box {% if prediction == 'Parasitized' %}red{% else %}green{% endif %}">
+        <h2>{{ prediction }}</h2>
+        <p>Confidence: {{ confidence }}%</p>
+    </div>
+
+    <div class="details">
+        <p><strong>Processing Time:</strong> {{ processing_time }}s</p>
+        <p><strong>Parasitized Probability:</strong> {{ parasitized }}%</p>
+        <p><strong>Uninfected Probability:</strong> {{ uninfected }}%</p>
+        <p><strong>Timestamp:</strong> {{ timestamp }}</p>
+    </div>
+
+    <div class="disclaimer">
+        ⚠️ This AI system is a screening tool. Please consult qualified medical professionals.
+    </div>
+
+    <a href="/" class="back-btn">Analyze Another Image</a>
+
+</div>
+
+</body>
+</html>

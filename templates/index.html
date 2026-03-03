@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MalariaScope AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<section class="hero">
+    <h1>Revolutionary <span>AI-Powered</span><br>Malaria Detection</h1>
+    <p>Clinical-grade accuracy • Real-time analysis • Instant results</p>
+
+    <div class="stats">
+        <div class="card">
+            <h2>95.6%</h2>
+            <p>Accuracy</p>
+        </div>
+        <div class="card">
+            <h2><3s</h2>
+            <p>Analysis Time</p>
+        </div>
+        <div class="card">
+            <h2>2,852</h2>
+            <p>Scans Today</p>
+        </div>
+    </div>
+</section>
+
+<section class="upload-section">
+    <h2>Upload Blood Cell Image</h2>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <div class="drop-zone">
+            <input type="file" name="file" required>
+            <p>Drop your microscopic image here<br>or click to browse</p>
+        </div>
+
+        <button type="submit" class="analyze-btn">
+            Analyze Sample
+        </button>
+    </form>
+</section>
+
+</body>
+</html>
