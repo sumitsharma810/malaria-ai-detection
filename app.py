@@ -129,4 +129,5 @@ if __name__ == "__main__":
     print("🚀 Starting Flask Server...")
     print("Model Status:", "✅ Loaded" if model else "❌ Not Loaded")
 
-    app.run(debug=True, use_reloader=False)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
