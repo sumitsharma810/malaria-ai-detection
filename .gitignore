@@ -6,10 +6,10 @@ __pycache__/
 venv/
 .env
 
-# Dataset (VERY IMPORTANT)
+# Dataset
 dataset/
 
-# Model file (optional)
+# Model file
 malaria_model.h5
 
 # System files
